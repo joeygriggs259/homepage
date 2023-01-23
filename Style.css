@@ -1,0 +1,131 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-size:100%;
+    background-repeat:repeat;
+    
+}
+
+div {
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 250px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    transition: 0.3s;
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media screen and (max-height: 450px) {
+.overlay a {font-size: 20px}
+.overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+}
+}
+
+h1 {
+    font-size: 50px;
+}
+
+#heady {
+    font-size: 45px; 
+    color: rgba(255, 66, 66, 0.781)
+}
+
+#heady:hover, #heady:focus {
+    color: rgba(248, 108, 108, 0.781)
+}
+
+.pointer {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#offline {
+    font-size: 1.5vw;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    position: absolute;
+    bottom: 1vh;
+    left: 1vw;
+}
+
+#logo {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#logo:hover, #logo:focus {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
