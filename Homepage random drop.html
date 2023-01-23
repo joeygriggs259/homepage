@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Joseph's Homepage</title>
+    <link rel="shortcut icon" type="image/png" href="img/fav.png">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+      $("#hide").click(function(){
+        $("p").slideToggle("slow");
+      });
+    });
+</script>
+
+<script>
+    function change() {
+        var images = ["Amex-Poppy-Field.jpg",
+        "background.jpg", 
+        "trees.jpg", 
+        "sea.jpg",
+        "forest.jpg", 
+        "bridge.jpg", 
+        "door.jpg", 
+        "durdle.jpg",
+        "mountains.jpg", 
+        "rainforest.jpg", 
+        "river.jpg",
+        "lightening.jpg",
+        "lights.jpg",
+        "finland.jpg",
+        "mount.jpg",
+        "ice.jpg",
+        "red.jpg",
+        "shooting.jpg",
+        "side.jpg",
+        "tain.jpg",
+        "tree.jpg",
+        "vol.jpg",
+        "weezy.jpg"];
+        var randomNumber = Math.floor(Math.random() * images.length);
+        var x = images[randomNumber];
+        var bgImg = 'url(' + x + ')';
+        document.getElementsByTagName("body")[0].style.backgroundImage = bgImg;
+    }
+</script>
+
+<script>
+    var bgImage = 'https://source.unsplash.com/1600x900/?landscape;dark'
+    function back() {
+        if (navigator.onLine) {
+            document.body.style.cssText+=`background-image:url(${bgImage})`;
+            
+          } 
+        else {
+            change();
+            document.getElementById("offline").innerHTML = "You are offline."
+            document.getElementById("logo").style.display = "none"
+            }
+        }
+</script>
+
+<script>
+    function showMe() {
+      var moreText = document.getElementById("more");
+      
+      if (moreText.style.display === "inline") {
+        more.style.display = "none";
+      }
+      else {
+        more.style.display = "inline";
+      }
+    }
+</script>
+
+<script>
+    function showMe2() {
+      var moreText = document.getElementById("more2");
+      
+      if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+      }
+      else {
+        moreText.style.display = "inline";
+      }
+    }
+</script>
+
+<script>
+  function showMe3() {
+    var moreText = document.getElementById("more3");
+    
+    if (moreText.style.display === "inline") {
+      moreText.style.display = "none";
+    }
+    else {
+      moreText.style.display = "inline";
+    }
+  }
+</script>
+
+<body onload="startTime(); back(); startDate()"> <!-- Remove 'startDate()' to make it say 'Welcome Joseph' -->
+
+
+<div id="myNav" class="overlay">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav')">&times;</a>
+<div class="overlay-content">
+    <h1 style="color: white;" class="noSelect">Moodle Links</h1>
+    <a href="https://portal.lancaster.ac.uk/portal/home"></a>
+    <div><span id="year1" onclick="showMe()" class="pointer"><a id="heady">Year 1</a></span>
+    <span id="more" style="display: none" class="noSelect">                                                                   <!-- Change display to 'inline' to show initially -->
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=30570" onclick="closeNav()">Part I Physics</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=30041" onclick="closeNav()">MATH101: Calculus</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=30042" onclick="closeNav()">MATH111: Numbers and Relations</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=30571" onclick="closeNav()">PHYS101: The Physical Universe</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=29911" onclick="closeNav()">MATH102: Further Calculus</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=29912" onclick="closeNav()">MATH112: Discrete Mathematics</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=31701" onclick="closeNav()">PHYS102: Classical Mechanics</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=29817" onclick="closeNav()">MATH103: Probability</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=29812" onclick="closeNav()">MATH113: Convergence and Continuity</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=31929" onclick="closeNav()">PHYS103: Electric and Magnetic Fields</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=29740" onclick="closeNav()">MATH104: Statistics</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=29722" onclick="closeNav()">MATH114: Integration and Differentiation</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=31794" onclick="closeNav()">PHYS104: Thermal Properties of Matter</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=29614" onclick="closeNav()">MATH105: Linear Algebra</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=31828" onclick="closeNav()">PHYS105: Quantum Physics</a>
+        <a href="https://modules.lancaster.ac.uk/course/view.php?id=31829" onclick="closeNav()">PHYS115: Vector Calculus</a>
+        <a href="https://exams.lancaster.ac.uk/my/" onclick="closeNav()">Exams Page</a>
+    </span></div>
+
+    <div><span id="year2" onclick="showMe2()" class="pointer"><a id="heady">Year 2</a></span>
+        <span id="more2" style="display: none" class="noSelect">
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=34699" onclick="closeNav()">MATH210: Real Analysis</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=34700" onclick="closeNav()">MATH220: Linear Algebra II</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=33744" onclick="closeNav()">PHYS222: Electromagnetism, Waves and Optics</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=35048" onclick="closeNav()">PHYS232: Relativity, Nuclei and Particles</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=35049" onclick="closeNav()">Introduction to Experimental Labs / Experimental Labs, Skills & Mechanics</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=32471" onclick="closeNav()">MATH225: Abstract Algebra</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=35150" onclick="closeNav()">MATH245/246: Computational Mathematics</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=33985" onclick="closeNav()">PHYS223: Quantum Mechanics</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=35306" onclick="closeNav()">PHYS273: Mechanics and Variations</a>
+          <a href="https://www.lancaster.ac.uk/student-and-education-services/exams-and-assessment/past-papers/" onclick="closeNav()">Past Papers</a>
+
+        </span></div>
+    
+    <div><span id="year3" onclick="showMe3()" class="pointer"><a id="heady">Year 3</a></span>
+        <span id="more3" style="display: inline" class="noSelect">
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=37021" onclick="closeNav()">PHYS311: Particle Physics</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=37022" onclick="closeNav()">PHYS321: Atomic Physics</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=37027" onclick="closeNav()">PHYS375: Theoretical Physics Independent Study</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=37634" onclick="closeNav()">PHYS322: Statistical Physics</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=36326" onclick="closeNav()">MATH313/413: Probability Theory</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=37910" onclick="closeNav()">PHYS313: Solid State Physics</a>
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=37915" onclick="closeNav()">PHYS379: Theoretical Physics Group Project</a>
+        </span></div>
+</div>
+</div>
+</div>
+
+<div id="birthday" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('birthday')">&times;</a>
+  <div class="overlay-content">
+      <h1 style="font-size: 10vw; color: rgba(255, 66, 66)" class="noSelect">Happy Birthday!</h1>
+  </div>
+  </div>
+
+<span style="font-size:50px;cursor:pointer; margin: 20px; color: white;" onclick="openNav('myNav')" class="noSelect">&#9776; </span>
+
+<script>
+function openNav(ele) {
+document.getElementById(ele).style.width = "100%";
+}
+
+function closeNav(ele) {
+document.getElementById(ele).style.width = "0%";
+}
+</script>
+      
+      
+
+<div id="clock" style="font-size: 16.75vw; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -60%)" class="noSelect"></div>
+<div id="day" style="font-size: 5.55vw; position: fixed; top: 50%; left: 50%; transform: translate(-50%, +60%)" class="noSelect">Welcome, Joseph.</div>
+    
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML =
+    h + ":" + m;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};
+    return i;
+}
+function startDate() {
+  const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const add = ["st", "nd", "rd", "th"]
+
+  const d = new Date();
+  let day = days[d.getDay()];
+  var date = d.getDate()
+
+  if (date > 3){
+    var addon = add[3]
+  }
+
+  if (date == 1){
+    var addon = add[0]
+  }
+
+  if (date == 21){
+    var addon = add[0]
+  }
+
+  if (date == 31){
+    var addon = add[0]
+  }
+
+  if (date == 2){
+    var addon = add[1]
+  }
+
+  if (date == 22){
+    var addon = add[1]
+  }
+
+  if (date == 3){
+    var addon = add[2]
+  }
+
+  if (date == 23){
+    var addon = add[2]
+  }
+
+  let month = months[d.getMonth()];
+  document.getElementById("day").innerHTML = day + " " + date + addon + " " + month;
+  document.getElementById("day").style.fontSize = "3.7vw"
+  document.getElementById("day").style.marginTop = "3vh"
+
+  if ((date == 25)&(month == "September")){
+    openNav('birthday')
+  }
+}
+</script>
+
+
+<div id ="offline" class="noSelect"><a href="https://portal.lancaster.ac.uk/portal/my-area/timetable"><img id="logo" alt="portal.lancaster.ac.uk" src="logo.png" style="width:2vw"></a></div> 
+
+</body>
