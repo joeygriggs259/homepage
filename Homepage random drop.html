@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Joseph's Homepage</title>
-    <link rel="shortcut icon" type="image/png" href="fav.png">
+    <link rel="shortcut icon" type="image/png" href="img/fav.png">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
@@ -104,6 +104,19 @@
   }
 </script>
 
+<script>
+  function showMe4() {
+    var moreText = document.getElementById("more4");
+    
+    if (moreText.style.display === "inline") {
+      moreText.style.display = "none";
+    }
+    else {
+      moreText.style.display = "inline";
+    }
+  }
+</script>
+
 <body onload="startTime(); back(); startDate()"> <!-- Remove 'startDate()' to make it say 'Welcome Joseph' -->
 
 
@@ -159,6 +172,12 @@
           <a href="https://modules.lancaster.ac.uk/course/view.php?id=37915" onclick="closeNav()">PHYS379: Theoretical Physics Group Project</a>
           <a href="https://modules.lancaster.ac.uk/course/view.php?id=37718" onclick="closeNav()">MATH328: Number Theory</a>
           <a href="https://modules.lancaster.ac.uk/course/view.php?id=35584" onclick="closeNav()">The PLACE - Physics Students Conference</a>
+          <a href="https://www.lancaster.ac.uk/student-and-education-services/exams-and-assessment/past-papers/" onclick="closeNav()">Past Papers</a>
+        </span></div>
+
+    <div><span id="year4" onclick="showMe4()" class="pointer"><a id="heady">Year 4</a></span>
+        <span id="more4" style="display: none" class="noSelect">
+          <a href="https://modules.lancaster.ac.uk/course/view.php?id=38516" onclick="closeNav()">PHYS452: MPhys Literature Review</a>
           <a href="https://www.lancaster.ac.uk/student-and-education-services/exams-and-assessment/past-papers/" onclick="closeNav()">Past Papers</a>
         </span></div>
 </div>
