@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ben's Homepage</title>
+    <link rel="shortcut icon" type="image/png" href="img/fav.png">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+      $("#hide").click(function(){
+        $("p").slideToggle("slow");
+      });
+    });
+</script>
+
+<script>
+    function change() {
+        var images = ["Amex-Poppy-Field.jpg",
+        "background.jpg", 
+        "trees.jpg", 
+        "sea.jpg",
+        "forest.jpg", 
+        "bridge.jpg", 
+        "door.jpg", 
+        "durdle.jpg",
+        "mountains.jpg", 
+        "rainforest.jpg", 
+        "river.jpg",
+        "lightening.jpg",
+        "lights.jpg",
+        "finland.jpg",
+        "mount.jpg",
+        "ice.jpg",
+        "red.jpg",
+        "shooting.jpg",
+        "side.jpg",
+        "tain.jpg",
+        "tree.jpg",
+        "vol.jpg",
+        "weezy.jpg"];
+        var randomNumber = Math.floor(Math.random() * images.length);
+        var x = images[randomNumber];
+        var bgImg = 'url(' + x + ')';
+        document.getElementsByTagName("body")[0].style.backgroundImage = bgImg;
+    }
+</script>
+
+<script>
+    var bgImage = 'https://source.unsplash.com/1600x900/?landscape;dark'
+    function back() {
+        if (navigator.onLine) {
+            document.body.style.cssText+=`background-image:url(${bgImage})`;
+            
+          } 
+        else {
+            change();
+            document.getElementById("offline").innerHTML = "You are offline."
+            document.getElementById("logo").style.display = "none"
+            }
+        }
+</script>
+
+<script>
+    function showMe() {
+      var moreText = document.getElementById("more");
+      
+      if (moreText.style.display === "inline") {
+        more.style.display = "none";
+      }
+      else {
+        more.style.display = "inline";
+      }
+    }
+</script>
+
+<script>
+    function showMe2() {
+      var moreText = document.getElementById("more2");
+      
+      if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+      }
+      else {
+        moreText.style.display = "inline";
+      }
+    }
+</script>
+
+<script>
+  function showMe3() {
+    var moreText = document.getElementById("more3");
+    
+    if (moreText.style.display === "inline") {
+      moreText.style.display = "none";
+    }
+    else {
+      moreText.style.display = "inline";
+    }
+  }
+</script>
+
+<script>
+  function showMe4() {
+    var moreText = document.getElementById("more4");
+    
+    if (moreText.style.display === "inline") {
+      moreText.style.display = "none";
+    }
+    else {
+      moreText.style.display = "inline";
+    }
+  }
+</script>
+
+<body onload="startTime(); back(); startDate()"> <!-- Remove 'startDate()' to make it say 'Welcome Joseph' -->
+
+
+<div id="myNav" class="overlay">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav')">&times;</a>
+<div class="overlay-content">
+    <h1 style="color: rgb(27, 90, 239);" class="noSelect">Links</h1>
+    <a href="https://kle.keele.ac.uk/ultra/institution-page" onclick="closeNav()">Keele KLE</a>
+    <a href="https://mail.google.com/mail/u/0/?hl=en#inbox" onclick="closeNav()">Gmail</a>
+    <a href="https://www.fotmob.com/en-GB" onclick="closeNav()">Futmob</a>
+
+</div>
+</div>
+</div>
+
+<div id="birthday" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('birthday')">&times;</a>
+  <div class="overlay-content">
+      <h1 style="font-size: 10vw; color: rgba(255, 66, 66)" class="noSelect">Happy Birthday!</h1>
+  </div>
+  </div>
+
+<span style="font-size:50px;cursor:pointer; margin: 20px; color: white;" onclick="openNav('myNav')" class="noSelect">&#9776; </span>
+
+<script>
+function openNav(ele) {
+document.getElementById(ele).style.width = "100%";
+}
+
+function closeNav(ele) {
+document.getElementById(ele).style.width = "0%";
+}
+</script>
+      
+      
+
+<div id="clock" style="font-size: 16.75vw; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -60%)" class="noSelect"></div>
+<div id="day" style="font-size: 5.55vw; position: fixed; top: 50%; left: 50%; transform: translate(-50%, +60%)" class="noSelect">Welcome, Ben.</div>
+    
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML =
+    h + ":" + m;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};
+    return i;
+}
+function startDate() {
+  const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const add = ["st", "nd", "rd", "th"]
+
+  const d = new Date();
+  let day = days[d.getDay()];
+  var date = d.getDate()
+
+  if (date > 3){
+    var addon = add[3]
+  }
+
+  if (date == 1){
+    var addon = add[0]
+  }
+
+  if (date == 21){
+    var addon = add[0]
+  }
+
+  if (date == 31){
+    var addon = add[0]
+  }
+
+  if (date == 2){
+    var addon = add[1]
+  }
+
+  if (date == 22){
+    var addon = add[1]
+  }
+
+  if (date == 3){
+    var addon = add[2]
+  }
+
+  if (date == 23){
+    var addon = add[2]
+  }
+
+  let month = months[d.getMonth()];
+  document.getElementById("day").innerHTML = day + " " + date + addon + " " + month;
+  document.getElementById("day").style.fontSize = "3.7vw"
+  document.getElementById("day").style.marginTop = "3vh"
+
+  if ((date == 27)&(month == "April")){
+    openNav('birthday')
+  }
+}
+</script>
+
+
+<div id ="offline" class="noSelect"><a href="https://portal.lancaster.ac.uk/portal/my-area/timetable"><img id="logo" alt="portal.lancaster.ac.uk" src="keele-uni-logo.png" style="width:3vw"></a></div> 
+
+</body>
